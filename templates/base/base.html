@@ -1,0 +1,112 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Appland Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  {% load static  %}
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/aos/aos.css' %} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/bootstrap-icons/bootstrap-icons.css' %} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/boxicons/css/boxicons.min.css' %} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/glightbox/css/glightbox.min.css' %} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/swiper/swiper-bundle.min.css' %} ">
+
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="{% static 'base/css/style.css' %} ">
+
+
+  <!-- =======================================================
+  * Template Name: Appland - v4.0.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  {% block navbar %}
+        {% include 'base/partials/_navbar.html' %}
+  {% endblock %}
+  <!-- End Navbar -->
+
+  <!-- ======= Header ======= -->
+  {% block header %}
+        {% include 'base/partials/_header.html' %}
+  {% endblock %}
+ <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= App Features Section ======= -->
+      {% block features %}
+        {% include 'base/partials/_features.html' %}
+      {% endblock %}
+
+    <!-- End App Features Section -->
+
+
+
+    <!-- ======= Gallery Section ======= -->
+    {% block gallery %}
+        {% include 'base/partials/_gallery.html' %}
+      {% endblock %}
+    <!-- End Gallery Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    {% block testimonials %}
+        {% include 'base/partials/_testimonials.html' %}
+    {% endblock %}
+    <!-- End Testimonials Section -->
+
+    <!-- ======= Pricing Section ======= -->
+      {% block pricing %}
+        {% include 'base/partials/_pricing.html' %}
+      {% endblock %}
+    <!-- End Pricing Section -->
+  
+
+    <!-- ======= Contact Section ======= -->
+    {% block contact %}
+        {% include 'base/partials/_contact.html' %}
+    {% endblock %}
+   <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+    {% block footer %}
+        {% include 'base/partials/_footer.html' %}
+    {% endblock %}
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{% static 'base/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'base/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'base/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'base/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'base/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'base/js/main.js' %}"></script>
+
+</body>
+
+</html>
