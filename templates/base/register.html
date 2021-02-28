@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>Register</title>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--- Link css style --->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/register.css' %}">
+  </head>
+  <body>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8" style="margin-top: 15px">
+              <div class="mb-4">
+                 <h3>Register</h3><br>
+              </div>
+                <form method="POST" action="" >
+               {% csrf_token %}
+
+                   <div class="form">
+                       <div class="col-md-4">
+                            <h4> Username:</h4>
+                       </div>
+                       <div class="col-md-8" style="margin-bottom: 15px">
+                            <input type="text" class="form-control" id="username">
+                       </div>
+                   </div>
+
+                     <div class="form">
+                       <div class="col-md-4">
+                            <h4> Email:</h4>
+                       </div>
+                       <div class="col-md-8" style="margin-bottom: 15px">
+                            <input type="text" class="form-control" id="username">
+                       </div>
+                   </div>
+
+                    <div class="form" style="margin-bottom: 15px">
+                          <div class="col-md-4">
+                               <h4> Password:</h4>
+                          </div>
+                          <div class="col-md-8" style="margin-bottom: 20px">
+                               <input type="password" class="form-control" id="password">
+                          </div>
+                    </div>
+
+                    <div class="form" style="margin-bottom: 15px">
+                          <div class="col-md-4">
+                               <h4> Confirm Password:</h4>
+                          </div>
+                          <div class="col-md-8" style="margin-bottom: 20px">
+                               <input type="password" class="form-control" id="password">
+                          </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" value="login" style="">Log in</button>
+
+
+                     <a href="{% url 'login' %}">Already a member?</a>
+
+
+
+
+
+               </form>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-top: -80px">
+          <img src="{% static 'authorized/img/register.svg' %}" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
