@@ -15,62 +15,66 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/register.css' %}">
   </head>
-  <body>
-  <div class="content">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 contents">
-          <div class="row justify-content-center">
-            <div class="col-md-8" style="margin-top: 15px">
-              <div class="mb-4">
-                 <h3>Register</h3><br>
-              </div>
-                <form method="POST" action="" >
-               {% csrf_token %}
-
-                   <div class="form">
-                       <div class="col-md-4">
-                            <h4> Username:</h4>
-                       </div>
-                       <div class="col-md-8" style="margin-bottom: 15px">
-                            <input type="text" class="form-control" id="username">
-                       </div>
-                   </div>
-
+<body>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 contents">
+              <div class="row justify-content-center">
+                <div class="col-md-8" style="margin-top: 15px">
+                  <div class="mb-4">
+                     <h3>Register</h3><br>
+                  </div>
+                <form method="POST" action="">
+                    {% csrf_token %}
                      <div class="form">
                        <div class="col-md-4">
-                            <h4> Email:</h4>
+                             {{ form.username.label }}
                        </div>
                        <div class="col-md-8" style="margin-bottom: 15px">
-                            <input type="text" class="form-control" id="username">
+                            {{ form.username }}
+                       </div>
+                   </div>
+                     <div class="form">
+                       <div class="col-md-4">
+                              {{ form.email.label }}
+                       </div>
+                       <div class="col-md-8" style="margin-bottom: 15px">
+                            {{ form.email }}
                        </div>
                    </div>
 
                     <div class="form" style="margin-bottom: 15px">
                           <div class="col-md-4">
-                               <h4> Password:</h4>
+                              {{ form.password1.label }}
                           </div>
                           <div class="col-md-8" style="margin-bottom: 20px">
-                               <input type="password" class="form-control" id="password">
+                               {{ form.password1 }}
                           </div>
                     </div>
 
-                    <div class="form" style="margin-bottom: 15px">
+                     <div class="form" style="margin-bottom: 15px">
                           <div class="col-md-4">
-                               <h4> Confirm Password:</h4>
+                                 {{ form.password2.label }}
                           </div>
                           <div class="col-md-8" style="margin-bottom: 20px">
-                               <input type="password" class="form-control" id="password">
+                               {{ form.password2 }}
                           </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">
-                     <a href="{% url 'welcome' %}" style="color: white; text-decoration: none; font-size: 18px">Register</a>
-                    </button>
-                     <a href="{% url 'login' %}">Already a member?</a>
+                      <div class="form" style="margin-bottom: 15px">
+                          <div class="col-md-4">
+                              <button class="btn btn-primary" type="submit" name="Create User" style="width: 100px"> Register </button>
+                          </div>
+                          <div class="col-md-8" style="margin-top: 25px">
+                              <a href="{% url 'login' %}">Already a member?</a>
+                          </div>
+                    </div>
+
                 </form>
-            </div>
+              </div>
           </div>
+          <div style="color: indianred">{{ form.errors }} </div>
         </div>
         <div class="col" style="margin-top: -80px">
           <img src="{% static 'authorized/img/register.svg' %}" alt="Image" class="img-fluid">
@@ -78,5 +82,5 @@
       </div>
     </div>
   </div>
-  </body>
+</body>
 </html>
