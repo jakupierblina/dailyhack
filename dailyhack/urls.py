@@ -30,7 +30,7 @@ urlpatterns = [
 
     #call base
     path('', baseviews.base, name='base'),
-    path('login/', baseviews.login, name='login'),
-    path('register/', baseviews.register, name='register'),
+    path('login/', baseviews.loginPage, name='login'),
+    path('register/', baseviews.registerPage, name='register'),
     path('welcome/', authorizedviews.index, name='welcome'),
 ]
