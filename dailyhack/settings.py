@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'dailyhack.base',
     'dailyhack.authorized',
+    "verify_email",
+
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
      'static',
 )
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER ='middlegroundinf@gmail.com'
+EMAIL_HOST_PASSWORD ='UQETwRvJy4Eq8eM5'

@@ -35,5 +35,8 @@ urlpatterns = [
     path('logout/', baseviews.logoutUser, name='logout'),
 
     path('welcome/', authorizedviews.index, name='welcome'),
+    path('calendar/', authorizedviews.calendar, name='calendar'),
+    path('todo/', authorizedviews.todo, name='todo'),
+    path('diary/', authorizedviews.diary, name='diary'),
 
 ]
