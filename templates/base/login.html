@@ -19,20 +19,16 @@
   <div class="content">
 
     <div class="container">
-
       <div class="row">
-
         <div class="col-md-6">
           <img src="{% static 'authorized/img/login.svg' %}" alt="Image" class="img-fluid">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
-
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Sign In</h3><br>
               </div>
-
            <form method="POST" action="" >
                {% csrf_token %}
 
@@ -59,20 +55,15 @@
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
                <button type="submit" class="btn btn-primary">
-
                    <a href="{% url 'welcome' %}" style="color: white; text-decoration: none; font-size: 18px"> Log in</a>
                </button>
                <span></span><a href="{% url 'register' %}">Don't have account?</a></span>
                </form>
 
-
             </div>
           </div>
-
-
         </div>
       </div>
-
     </div>
   </div>
   </body>
