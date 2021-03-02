@@ -1,5 +1,12 @@
+import os
+
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
+from django.core.mail import send_mail
 from .forms import CreateUserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -33,6 +40,9 @@ def registerPage(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
+            emailto = form.cleaned_data.get('email')
+
+
             messages.success(request, 'Profile name' + user +'was created succesfully!')
             return redirect('login')
     context = {

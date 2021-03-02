@@ -11,16 +11,16 @@
   <div class="collapse navbar-collapse" id="navbarText" >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a  class="nav-link" href="#">HOME </a>
+        <a  class="nav-link" href="{% url 'welcome' %}">HOME </a>
       </li>
       <li class="nav-item">
-        <a  class="nav-link" href="#">TO-DO</a>
+        <a  class="nav-link" href="{% url 'todo' %}">TO-DO</a>
       </li>
       <li class="nav-item">
-        <a  class="nav-link" href="#"> DIARY</a>
+        <a  class="nav-link" href="{% url 'diary' %}"> DIARY</a>
       </li>
       <li class="nav-item">
-        <a  class="nav-link" href="#"> CALENDAR</a>
+        <a  class="nav-link" href="{% url 'calendar' %}"> CALENDAR</a>
       </li>
     </ul>
     <span class="navbar-text">
