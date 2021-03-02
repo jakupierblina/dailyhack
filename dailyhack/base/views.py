@@ -7,6 +7,8 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.core.mail import send_mail
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email
 from .forms import CreateUserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -42,12 +44,22 @@ def registerPage(request):
             user = form.cleaned_data.get('username')
             emailto = form.cleaned_data.get('email')
 
-
+            template = render_to_string('base/mesage.html', {'name': user})
+            email = EmailMessage(
+                'Welcome to DailyHack',
+                template,
+                settings.EMAIL_HOST_USER,
+                [emailto],
+            )
+            email.fail_silently=False
+            email.send()
             messages.success(request, 'Profile name' + user +'was created succesfully!')
             return redirect('login')
     context = {
         'form': form,
     }
+
+
     return render(request, 'base/register.html', context)
 
 
