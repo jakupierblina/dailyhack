@@ -6,5 +6,104 @@
 
 
 {% block content %}
-<h1>Welcome inside webapplication</h1>
+       {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/index.css' %} ">
+            <div class="container" style="color: #507486">
+                <br><h1>Start your day with six best Buddha lessons!</h1> <br>
+            </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm">
+            <h3>Monastic </h3>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                   <img src="{% static 'authorized/img/index/coll2.jfif' %}" alt="My image"><br>
+                </div>
+                <div class="flip-card-back"><br>
+                    <h1>Support</h1>
+                    <p>Support for life has been provided entirely by lay supporters through daily acts of generosity. </p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+            <h3>Love</h3>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                   <img src="{% static 'authorized/img/index/coll3.jfif' %}" alt="My image"><br>
+                </div>
+                <div class="flip-card-back"><br>
+                    <h1> Love </h1>
+                    <p>Love encompasses a range of strong and positive emotional and mental states, from the most sublime virtue or good habit, the deepest interpersonal affection, to the simplest pleasure.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <h3>Zen</h3>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="{% static 'authorized/img/index/col4.jpg' %}" alt="My image"><br>
+                </div>
+                <div class="flip-card-back"><br>
+                    <h1>Dare</h1>
+                    <p>The whole secret of existence is to have no fear. Never fear what will become of you, depend on no one. Only the moment you reject all help are you freed.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div> <br><br><br>
+        <div class="row">
+            <div class="col-sm">
+                <h3>Hallelujah</h3>
+                 <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                         <img src="{% static 'authorized/img/index/col1.jpg' %}" alt="My image"><br>
+                    </div>
+                    <div class="flip-card-back">
+                       <h1>Spiritual  </h1><br>
+                   <p>The dream can also signify a spiritual growth or leadership in the near future. The Buddha itself is a symbol of not only wisdom but also compassion and the drive for spiritual ambition.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        <div class="col-sm">
+            <h3>Gautama</h3>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                   <img src="{% static 'authorized/img/index/coll5.jfif' %}" alt="My image"><br>
+                </div>
+                <div class="flip-card-back"><br>
+                    <h1>Family  </h1><br>
+                   <p>Family life tends to reflect pre-existing cultural and religious values, customs, and socially recognised ways or traditions within particular countries</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <h3>Maitreya </h3>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                   <img src="{% static 'authorized/img/index/coll4.jpg' %}" alt="My image"><br>
+                </div>
+                 <div class="flip-card-back"><br>
+                      <h1>Future </h1><br>
+                      <p>Future is a reason for actions, willingness, and goals.Is derived from the word motive, or a need that requires satisfaction. </p>
+
+                 </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
 {% endblock %}
