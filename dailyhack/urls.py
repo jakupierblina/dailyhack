@@ -17,20 +17,20 @@ from django.contrib import admin
 from django.urls import path
 
 #import base first
-from .base import views
+from dailyhack.base import views as baseviews
+from dailyhack.authorized import views as authorizedviews
 
 
 
 
 #import authorized -- authorized is when a person has an account in the website
-#from dailyhack.authorized import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     #call base
-    path('', views.base, name='base'),
-    path('login/', views.login, name='login'),
-    path('register/', views.register, name='register'),
-    #path('welcome/', views.index, name='welcome'),
+    path('', baseviews.base, name='base'),
+    path('login/', baseviews.login, name='login'),
+    path('register/', baseviews.register, name='register'),
+    path('welcome/', authorizedviews.index, name='welcome'),
 ]

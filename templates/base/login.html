@@ -58,16 +58,13 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
-               <input type="submit" class="btn btn-primary" value="login">
+               <button type="submit" class="btn btn-primary">
+
+                   <a href="{% url 'welcome' %}" style="color: white; text-decoration: none; font-size: 18px"> Log in</a>
+               </button>
                <span></span><a href="{% url 'register' %}">Don't have account?</a></span>
                </form>
-               <div class="container" style="margin-left: -25px">
-                 {% for message in messages %}
-                  <p style="background-color: #fade56; color: black; height: 40px; width: 370px; margin-top; 20px; padding: 10px">
-                      {{ message}}
-                  </p>
-                  {% endfor %}
-               </div>
+
 
             </div>
           </div>
