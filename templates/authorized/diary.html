@@ -6,5 +6,66 @@
 
 
 {% block content %}
-<h1>Diary</h1>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/diary.css' %} ">
+    <script src="{% static 'authorized/js/diary.js' %}"></script>
+
+    <div class="row container-fluid">
+    <div class="col">
+        <h2>Diary</h2>
+        <button type="button" class="btn btn-danger" >
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add +
+        </button>
+    </div>
+    <div class="col">
+        <ul class="ul">
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>March 24th</h2>
+
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>2nd June</h2>
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>New years Eve</h2>
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>3rd February</h2>
+                       </a>
+          </li>
+        </ul>
+    </div>
+
+     <div class="col">
+        <ul class="ul">
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>8th August</h2>
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>17th Sep</h2>
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>Christ -mas Day</h2>
+            </a>
+          </li>
+          <li class="li">
+            <a class="a" href="#" contenteditable>
+              <h2>11th July</h2>
+            </a>
+          </li>
+        </ul>
+     </div>
+    </div>
 {% endblock %}
