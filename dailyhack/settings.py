@@ -134,4 +134,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER ='middlegroundinf@gmail.com'
-EMAIL_HOST_PASSWORD ='UQETwRvJy4Eq8eM5'
+EMAIL_HOST_PASSWORD =''

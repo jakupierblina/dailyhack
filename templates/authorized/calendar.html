@@ -6,5 +6,17 @@
 
 
 {% block content %}
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/calendar.css' %} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'authorized/css/calendar_helper.css' %} ">
+    <script src="{% static 'authorized/js/calendar.js' %}"></script>
+    <script src="{% static 'authorized/js/calendar_helper.js' %}"></script>
 <h1>Calendar</h1>
+    <div id='wrap'>
+        <div id='calendar'></div>
+        <div style='clear:both'></div>
+    </div>
 {% endblock %}
